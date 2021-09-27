@@ -38,8 +38,8 @@ namespace Mobs {
             true
         )
         mySprite.setVelocity(Math.randomRange(0, 60), Math.randomRange(0, 50))
-        mySprite.setBounceOnWall(true)
-        return mySprite
+        mySprite.setBounceOnWall(true);
+        return mySprite;
     }
     function spawnSnake() {
        let list = [img`
@@ -111,7 +111,7 @@ namespace Mobs {
     . . f b b b b b b c f . . . . . 
     . . . f f f f f f f . . . . . . 
     `]
-    return list;
+    return spawn(list);
     }
     function spawnBat() {
         let list = [img`
@@ -431,10 +431,10 @@ namespace Mobs {
     . . . . . . . . . . . . . . . . 
     `]
 
-        return spawn(list);
+      return spawn(list);
     }
     //% block
-    export function spawnMob(mob: Mob) {
+    export function spawnMob(mob: Mob) : Sprite {
         switch (mob) {
             case Mob.duck: return spawnDuck();
             case Mob.dog: return spawnDog();
