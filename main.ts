@@ -4,11 +4,11 @@ enum Mob {
     //% block="snake"
     snake,
     //% block="monkey"
-    moneky,
+    monkey,
     //% block="dog"
     dog,
-    //% block="shark"
-    shark
+    //% block="bat"
+    bat
 }
 namespace Mobs {
 
@@ -41,7 +41,7 @@ namespace Mobs {
         mySprite.setBounceOnWall(true);
         return mySprite;
     }
-    function spawnSnake() {
+    function spawnBat() {
        let list = [img`
     . . f f f . . . . . . . . f f f 
     . f f c c . . . . . . f c b b c 
@@ -113,7 +113,7 @@ namespace Mobs {
     `]
     return spawn(list);
     }
-    function spawnBat() {
+    function spawnSnake() {
         let list = [img`
     . . f f f . . . . . . . . f f f 
     . f f c c . . . . . . f c b b c 
@@ -183,7 +183,7 @@ namespace Mobs {
     . . f b b b b b b c f . . . . . 
     . . . f f f f f f f . . . . . . 
     `]
-    return list;
+        return spawn(list);
     }
 
     function spawnDog() {
@@ -438,8 +438,9 @@ namespace Mobs {
         switch (mob) {
             case Mob.duck: return spawnDuck();
             case Mob.dog: return spawnDog();
+            case Mob.bat: return spawnBat();
             case Mob.snake: return spawnSnake();
-            case Mob.moneky: return spawnMonkey();
+            case Mob.monkey: return spawnMonkey();
         }
         return spawnDuck();
     }
