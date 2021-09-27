@@ -10,6 +10,7 @@ enum Mob {
     //% block="bat"
     bat
 }
+//% color="#AA278D" weight=100 icon="\uf1b0"
 namespace Mobs {
 
     function spawn(list: any[]) {
